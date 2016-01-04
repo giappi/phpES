@@ -9,6 +9,7 @@
             if(preg_match("/.class.php$/is", $class))
             {
                 require_once $dir . "/" . $class;
+                echo $dir . "/" . $class . " is loaded <br />";
             }
         }
     }
