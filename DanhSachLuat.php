@@ -12,6 +12,7 @@
 
 $rules = Rules::getAll();
 
+//echo $rules;
 
 foreach($rules as $rule)
 {

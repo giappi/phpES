@@ -113,6 +113,7 @@ class Set implements Iterator
         return $c;
     }
     
+
     public function __toString()
     {
         return $this ->toString();
@@ -139,7 +140,7 @@ class Set implements Iterator
     
     /*
      * 
-     * Cài đặt chức năng có thể duyệt: foreach
+     * Cài đặt chức năng có thể duyệt: foreach(){}
      */
     public function current()
     {

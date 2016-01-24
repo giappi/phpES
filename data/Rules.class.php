@@ -36,6 +36,10 @@ class Rules
         return new Rule($left, $right->count() > 0 ? $right->get(0) : new Node(""));
     }
     
+    /**
+     * 
+     * @return \Set Tập luật
+     */
     public static function getAll()
     {
         $rows = Database::query("SELECT * FROM rule");
