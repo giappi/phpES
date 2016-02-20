@@ -26,7 +26,7 @@
     }
     
     echo "<br />";
-    echo $rules->get(6)->GiaThuyet;
+    var_dump($rules[0]->GiaThuyet->contains(new Set(array("b", "a"))));
 
 
 

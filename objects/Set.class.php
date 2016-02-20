@@ -46,6 +46,7 @@ class Set implements Iterator, ArrayAccess
     {
         $this->Items =  array_diff($this->Items, array($object));
     }
+    
     /**
      * Lấy ra và loại bỏ phần tử cuối cùng trong tập hợp
      * @return Object
@@ -90,14 +91,25 @@ class Set implements Iterator, ArrayAccess
     }
     
   
-    public function contains($another_set)
+    /**
+     * Check if all elements in $set1 is in this set
+     * @param Set $set1
+     * @return Boolean
+     */
+    public function contains($set1)
     {
         $pass = true;
-        foreach($another_set as $e)
+        foreach($set1 as $e)
         {
             $pass = $pass && $this->exists($e);
         }
         return $pass;
+    }
+    
+    
+    public function in($set1)
+    {
+        return $set1->contains(this);
     }
     
     
