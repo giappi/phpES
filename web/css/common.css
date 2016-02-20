@@ -1,0 +1,93 @@
+
+body
+{
+	text-align: left;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 255);
+}
+
+::-moz-selection
+{
+	background: rgba(255, 0, 0, 1);
+	color: #FFFFFF;
+	text-shadow: 0px 0px 1px #FFFFFF;
+}
+ul
+{
+	background: rgba(255, 0, 0, 0.3);
+	margin: 0px;
+	list-style-type: none;
+}
+
+.fullWidth
+{
+	width: 100%;
+}
+
+.clear_fix:after
+{
+    clear: both;
+    content: "---";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.no_border
+{
+	border: 0;
+	outline: none;
+}
+
+.v_space
+{
+	height: 20px;
+	display: block;
+}
+
+.align_block_vertical
+{
+	display: block;
+	padding: 10% 0;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.block_center
+{
+	margin: auto auto;
+}
+.fontSegoeUI
+{
+	font-family: "Segoe UI";
+	font-size: 11px;
+}
+
+.floatLeft
+{
+	float:left;
+}
+
+.floatRight
+{
+	float: right;
+}
+
+img
+{
+	margin: 0;
+}
+
+.description
+{
+    color: #808080;
+}
+
+.console
+{
+    text-shadow: none;
+}

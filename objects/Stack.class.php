@@ -5,7 +5,7 @@
  */
 class Stack extends SplStack
 {
-    
+    //Implemented
 }
 
 

@@ -36,7 +36,7 @@ class Rule
      */
     public function toString()
     {
-        return $this->GiaThuyet . " → " . $this->KetLuan;
+        return $this->GiaThuyet . " → " . "\"" . $this->KetLuan . "\"";
     }
     
     public function __toString()

@@ -127,7 +127,7 @@ class Set implements Iterator
         $t = "{";
         for ($i = 0; $i < $this->count(); $i++ )
         {
-            $t .= $this->Items[$i];
+            $t .= "\"".$this->Items[$i]."\"";
             if ($i < $this->count() - 1)
             {
                 $t .= ", ";

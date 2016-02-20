@@ -19,7 +19,7 @@
             $this -> Index = $index;
         }
 		
-        public function ToString()
+        public function toString()
         {
             return "(" . $this->Node . ", " . $this->Index . ")";
         }

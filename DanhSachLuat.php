@@ -5,22 +5,30 @@
     header("Content-Type: text/html; charset=utf-8");
 	
 ?>
-<pre>
-
+<html>
+    <head>
+        <meta charset="utt-8" />
+        <title>Chuyên gia chuẩn đoán bệnh</title>
+        <link rel="stylesheet" href="web/css/common.css" />
+    </head>
+    <body>    
+    <pre>
 <?php
 
 
-$rules = Rules::getAll();
+    $rules = Rules::getAll();
 
-//echo $rules;
+    //echo $rules;
 
-foreach($rules as $rule)
-{
-    echo $rule . "<br />";
-}
+    foreach($rules as $rule)
+    {
+        printf("%s<br />", $rule);
+    }
 
 
 
 ?>
-</pre>
-<br />
+    </pre>
+    <br />
+    </body>
+</html>

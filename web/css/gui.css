@@ -1,0 +1,160 @@
+
+.dialogue
+{
+	font-family: "Segoe UI";
+	font-size: 11px;
+	width: 50%;
+	max-width: 400px;
+	min-width: 40px;
+	margin: auto auto;
+	margin-top: 10%;
+	border: 0;
+	left: 100px;
+	top: 100px;
+}
+
+.dialogue_background
+{
+	/*background: rgba( 255, 0, 0, 0.5);*/
+	background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center , rgba(0, 0, 0, 0.1) 0%, rgba(20, 20, 20, 0.5) 100%) repeat scroll 0 0;
+	/*background-image: url(../img/dialog_bg.gif);*/
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.dialogue_container
+{
+	background-color: rgba(255, 0, 0, 0.3);
+	padding: 13px;
+	border-radius: 7px;
+	
+}
+
+.dialogue_content
+{
+	background-color: #FFFFFF;
+	border: rgba(0, 0, 0, 1) 1px solid;
+
+}
+
+
+.dialogue_title
+{
+	text-shadow: 0px 0px 1px #fff;
+	font-size: 13px;
+	text-align: left;
+	font-weight: bold;
+	/*background: rgb(109, 132, 180);*/
+	background: rgb(48, 48, 48);
+	color: #FFFFFF;
+	padding: 2px;
+}
+
+.dialogue_text
+{
+	padding-left: 5px;
+}
+
+.dialogue_icon
+{
+	display: inline-block;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	border: 0;
+	background-color: transparent;
+}
+
+.dialogue_icon_close
+{
+	background-image:url(../img/close.png)
+}
+
+
+.dialogue_body
+{
+	padding: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.dialogue_seperate
+{
+	height: 1px;
+	border: 0;
+	background-color: #AAAAAA;
+	margin: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.dialogue_button
+{
+
+	height:auto;
+	background-color: #FFFFFF;
+	margin: 5px;
+	margin-top: 0px;
+	padding: 5px;
+}
+
+.button
+{
+	cursor: pointer;
+}
+
+.button_dlg
+{
+	font-family: "Segoe UI";
+	font-size: 11px;
+	min-width: 60px;
+	border: 0;
+	background: rgb(59, 89, 152);
+	color: #FFFFFF;
+	padding: 7px;
+	margin-left: 5px;
+	text-shadow: 0px 0px 1px #fff, 0px 0px 1px #fff;
+	border-radius: 3px;
+	vertical-align: middle;
+	/*border-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 10px rgba(0, 0, 0, 0.6);*/
+}
+.button_selected
+{
+	background-color: #FF0000;
+}
+
+
+table
+{
+	border: #999999 1px solid;
+}
+
+.textbox
+{
+	vertical-align: middle;
+	margin-bottom: 3px;
+}
+
+.textbox_login
+{
+	font-size: 13px;
+	text-align: left;
+	text-shadow: 0px 0px 1px #000;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+.textboxFocus
+{
+	border-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 1px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+.login
+{
+	width: 60%;
+}
