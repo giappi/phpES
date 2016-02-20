@@ -24,6 +24,9 @@
     {
         printf("%s<br />", $rule);
     }
+    
+    echo "<br />";
+    echo $rules->get(6)->GiaThuyet;
 
 
 

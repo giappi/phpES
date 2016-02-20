@@ -11,10 +11,18 @@
  *
  * @author giappi
  */
-class Set implements Iterator
+class Set implements Iterator, ArrayAccess
 {
 
+    /**
+     *
+     * @var Array items of set
+     */
     private $Items;
+    /**
+     *
+     * @var Interger current index
+     */
     private $Index;
 
     public function Set($items =  array())
@@ -80,6 +88,17 @@ class Set implements Iterator
     public function getAll()
     {
         return $this->Items;
+    }
+    
+  
+    public function contains($another_set)
+    {
+        $pass = true;
+        foreach($another_set as $e)
+        {
+            $pass = $pass && $this->exists($e);
+        }
+        return $pass;
     }
     
     
@@ -165,6 +184,35 @@ class Set implements Iterator
     public function valid()
     {
         return isset($this->Items[$this->key()]);
+    }
+
+    
+    /* Make the Set can be access like a array */
+    
+    public function offsetExists($offset)
+    {
+        return isset($this->Items[$offset]);
+    }
+
+    public function offsetGet($offset)
+    {
+        return isset($this->Items[$offset]) ? $this->Items[$offset] : null;
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset))
+        {
+            $this->Items[] = $value;
+        } else
+        {
+            $this->Items[$offset] = $value;
+        }
+    }
+
+    public function offsetUnset($offset)
+    {
+        unset($this->Items[$offset]);
     }
 
 }

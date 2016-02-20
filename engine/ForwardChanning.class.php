@@ -13,5 +13,38 @@
  */
 class ForwardChanning
 {
-    //put your code here
+    /**
+     *
+     * @var Set(Node) Giả thuyết
+     */
+    public $GT;
+    /**
+     *
+     * @var Node Kết luận
+     */
+    public $KL;
+    
+    /**
+     * 
+     * @param Set(Node) $GT Bộ giả thuyết
+     * @param Node $KL Kết luận
+     */
+    public function ForwardChanning($GT, $KL)
+    {
+        $this->GT = $GT;
+        $this->KL = $KL;
+    }
+    
+    /**
+     * Mỗi bước sẽ trả về node cần được xác định tính đúng sai
+     */
+    public function step()
+    {
+        
+    }
+    
+    public function IsInferred()
+    {
+        
+    }
 }

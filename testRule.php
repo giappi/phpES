@@ -21,6 +21,8 @@ $rule1 = Rules::getById(2);
 echo $rule1;
 
 
+
+
 ?>
 </pre>
 <br />
