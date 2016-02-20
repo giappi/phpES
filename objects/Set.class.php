@@ -23,12 +23,11 @@ class Set implements Iterator, ArrayAccess
      *
      * @var Interger current index
      */
-    private $Index;
+    private $Index = 0;
 
     public function Set($items =  array())
     {
         $this -> Items = $items;
-        $this -> Index = 0;
     }
     
     /**
