@@ -106,10 +106,29 @@ class Set implements Iterator, ArrayAccess
         return $pass;
     }
     
-    
+    /**
+     * check if this set is in $set1
+     * @param Set $set1
+     * @return Boolean
+     */
     public function in($set1)
     {
-        return $set1->contains(this);
+        return $set1->contains($this);
+    }
+    
+    /**
+     * Merge two set into one set
+     * @param Set $set1
+     * @return Set new set
+     */
+    public function merge($set1)
+    {
+        $tmp_set = $this;
+        foreach($set1 as $e)
+        {
+            $tmp_set->add($e);
+        }
+        return $tmp_set;
     }
     
     

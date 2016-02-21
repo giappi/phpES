@@ -26,7 +26,15 @@
     }
     
     echo "<br />";
-    var_dump($rules[0]->GiaThuyet->contains(new Set(array("b", "a"))));
+    //var_dump($rules[0]->GiaThuyet->contains(new Set(array("b", "a"))));
+    //var_dump($rules[0]->GiaThuyet->contains(new Set(array( new Node(1, "a"), new Node(2, "b")))));
+    
+    echo "<br />";
+    $gt = new Set( array( new Node(1, "a"), new Node(2, "b")));
+    $kl = new Node(12, "m");
+    $tw = new ForwardChanning($gt, $kl, $rules);
+
+    var_dump($tw->IsInferred());
 
 
 

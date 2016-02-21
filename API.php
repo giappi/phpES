@@ -19,6 +19,7 @@
     require_once 'data/sqlite3.php';
     loadClasses("objects");
     loadClasses("data");
+    loadClasses("engine");
     
 
   

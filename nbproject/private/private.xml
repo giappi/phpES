@@ -4,10 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/localhost/public_html/phpES/DanhSachLuat.php</file>
-            <file>file:/D:/localhost/public_html/phpES/web/css/common.css</file>
+            <file>file:/D:/localhost/public_html/phpES/objects/Set.class.php</file>
             <file>file:/D:/localhost/public_html/phpES/API.php</file>
+            <file>file:/D:/localhost/public_html/phpES/engine/ForwardChanning.class.php</file>
             <file>file:/D:/localhost/public_html/phpES/objects/Node.class.php</file>
-            <file>file:/D:/localhost/public_html/phpES/objects/Node2.class.php</file>
         </group>
     </open-files>
 </project-private>
