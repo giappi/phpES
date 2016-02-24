@@ -70,4 +70,23 @@ class Database
         return self::query($sql);
     
     }
+    
+    public static function filter($sql_value)
+    {
+        $new_value = "";
+
+        for ($i = 0; $i < strlen($sql_value); $i++)
+        {
+            //Thêm dấu "\" vào trước kí tự đặc biệt
+            if ($sql_value[$i] == '\\' || $sql_value[$i] == '\'')
+                $new_value .= '\\';
+            $new_value .= $sql_value[$i];
+        }
+        return $new_value;
+    }
+
+    public static function khongdau($sql_value)
+    {
+        return StringFx::khongDau($sql_value);
+    }
 }
