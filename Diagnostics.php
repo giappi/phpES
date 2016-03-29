@@ -11,7 +11,8 @@
     /* GLOBALS */
     $__nodes = Nodes::get(0, 200);
     $__rules = Rules::getAll();
-    $__target = Nodes::getTarget(0, 200);
+    $__node_targets = Nodes::getTarget(0, 200);
+    $__rule_targets = Rules::getTarget();
 
 ?>
 
@@ -55,19 +56,18 @@
     
     /* Inference */
     $fw->IsInferred();
-    /* Set */ $result = $__target->getIntersection($fw->getInferred());
+    /* Lấy phần chung của tập "bệnh" và tập đã suy diễn được  */
+    /* Set */ $result = $__node_targets->getIntersection($fw->getInferred());
  
-    //Find node to ask
-    $max = 0;
-    foreach($__target as $node)
+    
+    
+    /* Find node to ask */
+    /* int */ $max = 0;
+    foreach($__node_targets as $node)
     {
         //$common = 
     }
 
-            
-
-    
-    
 
 ?>
 
@@ -105,9 +105,9 @@
         
     foreach($result as $node)
     {
-        $fw->KL = $node;
         echo "<b>Bạn bị $node .</b><br />";
     }
+    //echo "<pre>" . Rules::getTarget() . "</pre>";
         
 ?>
     
@@ -171,6 +171,7 @@
                             mySelect.setData(a);
                         }, () => {alert("Search error !");});
                 });
+                
                 
             };
         </script>

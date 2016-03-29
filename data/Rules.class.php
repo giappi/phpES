@@ -62,6 +62,25 @@ class Rules
         
         return $rules;
     }
+    
+    public static function getTarget()
+    {
+        $rows = Database::query("SELECT * FROM rule");
+        $rules = new Set();
+        $targets = Nodes::getTarget();
+        
+        foreach( $rows as $row)
+        {
+            $rule = self::getById($row["id"]);
+            if($targets->exists($rule->KetLuan))
+            {
+                $rules->add($rule);
+            }
+        }
+        
+        return $rules;
+    }
+    
 }
 
 ?>

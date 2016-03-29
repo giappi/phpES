@@ -85,7 +85,7 @@ class Nodes
      * @param int $limit
      * @return \Set
      */
-    public static function getTarget($offset, $limit)
+    public static function getTarget($offset = 0, $limit = 99999)
     {
         /**
          * Set $ns
