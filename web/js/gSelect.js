@@ -35,14 +35,12 @@ gSelect = function()
 
         this.data = 
         [
-           { "a" : "Please"},
-           { "b" : "don't"},
-           { "c" : "say"},
-           { "d" : "to"},
-           { "e" : "somebody"},
-           { "f" : "the"},
-           { "g" : "password"},
-           { "h" : "!"}
+           { "id" : "a" , "text" : "Please"},
+           { "id" : "b" , "text" : "don't"},
+           { "id" : "c" , "text" : "say"},
+           { "id" : "d" , "text" : "somebody"},
+           { "id" : "e" , "text" : "the"},
+           { "id" : "f" , "text" : "password"},
         ];
         
         this.searchEnable = true;
@@ -71,10 +69,10 @@ gSelect = function()
                     b.push({ "id" : options[i].value, "text" : options[i].text});
                 }
             }
-
+                console.log(b);
             for( var i in b)
             {
-                that.addSelectedItem(b[i]["id"], b[i]["text"]);
+                that.addSelectedItem(b[i]);
             }
 
             this.setData(data);
@@ -278,7 +276,7 @@ gSelect = function()
                     new Class(options[i]).removeClass("option_selected");
                 }
             }
-            document.title = that.$selectedIndex;
+            //document.title = that.$selectedIndex;
         };
 
         this.refreshDropDown = function()
@@ -287,14 +285,21 @@ gSelect = function()
 
             for (var i in that.data)
             {
+                //console.log("290: i = " + i + ", ");
+                
                 //Chrome seperate LowerCase/UpperCase when match
                 var a = that.data[i]["text"].toLowerCase();
                 var b = that.$input.value.toLowerCase();
 
                 if(this.searchEnable == false)
+                {
                     f = true;
+                }
                 else
+                {
                     f = a.match(b, "ig");
+                }
+                
                 if(f)
                 {
                     var div = document.createElement("div");
@@ -306,6 +311,7 @@ gSelect = function()
                     var value = document.createElement("span");
                     value.className = "value";
                     value.appendChild( document.createTextNode(that.data[i]["text"]));
+
 
 
                     div.onmousemove = function()

@@ -30,6 +30,11 @@ class Rule
         $this->GiaThuyet = $left;
         $this->KetLuan = $right;
     }
+    
+    public function equals($rule2)
+    {
+        return $this == $rule2;
+    }
     /**
      * 
      * @return String

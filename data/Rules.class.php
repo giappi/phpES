@@ -40,14 +40,21 @@ class Rules
      * 
      * @return \Set Tập luật
      */
-    public static function getAll()
+    public static function getAll($include_empty_rule = false)
     {
         $rows = Database::query("SELECT * FROM rule");
         $rules = new Set();
         foreach( $rows as $row)
         {
-           $rule = self::getById($row["id"]);
-           //if ($rule->GiaThuyet->count() > 0 && $rule->KetLuan->Id)
+            $rule = self::getById($row["id"]);
+            if($include_empty_rule == false)
+            {
+                if ($rule->GiaThuyet->count() > 0 && $rule->KetLuan->Id)
+                {
+                    $rules->add($rule);
+                }
+            }
+            else
             {
                 $rules->add($rule);
             }

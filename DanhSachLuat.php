@@ -33,8 +33,9 @@
     $gt = new Set( array( new Node(1, "a"), new Node(2, "b")));
     $kl = new Node(12, "m");
     $tw = new ForwardChanning($gt, $kl, $rules);
+   
 
-    var_dump($tw->IsInferred());
+    $tw->IsInferred();
 
 
 

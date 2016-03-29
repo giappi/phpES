@@ -2,7 +2,6 @@
 body
 {
 	text-align: left;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 255);
 }
 
 ::-moz-selection
@@ -16,6 +15,11 @@ ul
 	background: rgba(255, 0, 0, 0.3);
 	margin: 0px;
 	list-style-type: none;
+}
+
+.shadow
+{
+    text-shadow: 0 0 1px rgba(0, 0, 0, 255);
 }
 
 .fullWidth

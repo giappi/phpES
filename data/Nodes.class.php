@@ -13,6 +13,14 @@
  */
 class Nodes
 {
+    
+    public static function getNodeByID($id)
+    {
+        $rows = Database::query("SELECT * FROM nuts WHERE id = '" . $id ."'");
+        
+        return new Node($rows[0]["id"], $rows[0]["value"]);
+    }
+    
     public static function get($ofset, $limit)
     {
         $rows = Database::query("SELECT * FROM nuts ORDER BY value LIMIT " . $ofset . ", " . $limit . "");
@@ -67,6 +75,28 @@ class Nodes
 
         }
 
+        return $ns;
+    }
+    
+
+    /**
+     * Get target that need to be inferred
+     * @param int $offset
+     * @param int $limit
+     * @return \Set
+     */
+    public static function getTarget($offset, $limit)
+    {
+        /**
+         * Set $ns
+         */
+        $ns = new Set();
+        
+        $t = Database::query("SELECT * FROM KetLuan LIMIT " . $offset . ", " . $limit . "");
+        foreach ($t as $tr)
+        {
+            $ns->add(new Node($tr["nut_id"], $tr["nut_value"]));
+        }
         return $ns;
     }
 

@@ -35,7 +35,10 @@ class Set implements Iterator, ArrayAccess
      */
     public function add($object)
     {
-        array_push($this -> Items, $object);
+        if(!$this->exists($object))
+        {
+            array_push($this -> Items, $object);
+        }
     }
     /**
      * Loại bỏ một phần tử khỏi một tập hợp
@@ -62,8 +65,22 @@ class Set implements Iterator, ArrayAccess
      */
     public function exists($object)
     {
+        foreach($this->Items as $item)
+        {
+            //echo $item . " and " . $object . "<br />";
+            if($item->equals($object))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public function existsStrict($object)
+    {
         return in_array($object, $this->Items);
     }
+    
     /**
      * Đếm số phần tử có trong tập hợp
      * @return Integer
@@ -160,6 +177,24 @@ class Set implements Iterator, ArrayAccess
             }
         }
         return $c;
+    }
+    
+    
+    /**
+     * Giao hai tập hợp
+     * @param Set $set2
+     */
+    public function getIntersection($set2)
+    {
+        $kq = new Set();
+        foreach($set2 as $item)
+        {
+            if($this->exists($item))
+            {
+                $kq->add($item);
+            }
+        }
+        return $kq;
     }
     
 
