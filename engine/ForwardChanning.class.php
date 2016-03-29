@@ -61,6 +61,8 @@ class ForwardChanning
         $this->rules = $rules;
         $this->used_rule = new Set();
         $this->inferred = unserialize(serialize($this->GT));
+        
+        $this->log = "";
     }
     
     /**
@@ -91,7 +93,7 @@ class ForwardChanning
 
     public function IsInferred()
     {
-        
+        $this->log = "";
         if($this->GT->count() < 1)
         {
             $this->log .= "Không có gì để suy diễn.";

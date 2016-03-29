@@ -725,6 +725,10 @@ gSelect = function()
     {
     	return $g.$selectedItem;
     };
+    this.addSelectedItem = function($item)
+    {
+        $g.addSelectedItem($item);
+    }
     this.refresh = function()
     {
         $g.refreshDropDown();
