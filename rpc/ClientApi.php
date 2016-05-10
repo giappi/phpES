@@ -1,6 +1,6 @@
 <?php
 
-	require('API.php');
+	require('api.php');
     header("Content-Type: text/html; charset=utf-8");
 	
 ?>
